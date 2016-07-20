@@ -31,6 +31,7 @@
     "mongodb": "^2.0.46",
     "mongodb-autoincrement": "^1.0.0",
     "mongoose": "^4.1.12",
+    "mongoose-integer": "^0.1.1",
     "mysql": "^2.11.1",
     "node-sass": "^3.4.0",
     "nodemon": "^1.7.3",
