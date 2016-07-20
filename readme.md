@@ -29,6 +29,8 @@ Populate MongoSB with script in:
 
 ```
 app/models/scriptInsert/pois.rm
+or
+after running the application, run the test1 service
 
 ```
 

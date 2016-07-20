@@ -24,7 +24,7 @@ angular.module("app").controller("IndexController",
             POI.query(
                 function(list) {
                     if(list.length > 0){
-                        return;
+                        return Notification({message: 'Os POI\'s de teste já foram inseridos'});
                     }
 
                     var objs = [
