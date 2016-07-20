@@ -1,0 +1,45 @@
+{
+  "name": "nodewebapp",
+  "description": "Aplicação web em node",
+  "main": "server.js",
+  "authors": [
+    "Maycon Euzebio"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Node"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "bootstrap": "~3.3.5",
+    "angular-resource": "~1.4.7",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "angular-ui-mask": "~1.6.1",
+    "jquery": "~2.1.4",
+    "angular-ui-validate": "~1.2.1",
+    "angular-bootstrap": "~0.14.3",
+    "angular-material": "^1.0.5",
+    "angular-messages": "^1.5.0",
+    "angular-ui-notification": "^0.1.0",
+    "ng-pattern-restrict": "^0.2.0",
+    "angular-input-masks": "^2.1.1",
+    "angular-sanitize": "^1.5.3",
+    "angular-ui-router": "^0.2.18"
+  },
+  "resolutions": {
+    "angular": "~1.4.7",
+    "angular-translate": "^2.11.0",
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>404 - Página não encontrada | SobDemanda</title>
+
+    <!-- build:css css/404.min.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.css">
+    <link rel="stylesheet" href="styles/partials/common.css">
+    <link rel="stylesheet" href="styles/partials/header.css">
+    <link rel="stylesheet" href="styles/partials/footer.css">
+    <link rel="stylesheet" href="styles/404/404.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+    <% include partials/header.ejs %>
+    <div class="wrap">
+        <div class="container text-center">
+            <div class="jumbotron">
+                <h1>Página não encontrada!</h1>
+            </div>
+            <h2 class="text-center">
+                <a href="/">Voltar para a página principal</a>
+            </h2>
+        </div>
+    </div>
+    <% include partials/footer.ejs %>
+    <script type="text/javascript"> var user = <%- JSON.stringify(user) %> || null; console.log(user);</script>
+    <!-- build:js js/404.min.js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-notification/dist/angular-ui-notification.js"></script>
+    <script src="404/404.js"></script>
+    <script src="js/services/UserService.js"></script>
+    <script src="js/controllers/HeaderController.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

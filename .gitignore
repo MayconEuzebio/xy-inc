@@ -1,0 +1,12 @@
+/.idea/
+/.sass-cache/
+/.tmp/
+/.DS_Store
+/.DS_Store?
+/dist/
+/node_modules/
+/public/styles/
+/public/vendor/
+/public/bower_components/
+/script/
+/dump/

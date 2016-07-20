@@ -1,0 +1,72 @@
+<div id="gspinner" class="hiddenSpinner">
+    <div class="fumeSpinner"></div>
+    <p class="textSpinner"></p>
+</div>
+<div class="container" data-ng-controller="HeaderController" id="header"><!--header-->
+    <div class="navbar-header">
+        <button class="navbar-toggle navbar-menu-btn" type="button" data-ng-click="toggleCollapsibleMenu()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand"><img alt="NodeJS" class="logo-header" src="/partials/img/node-js.svg" aria-label="NodeJS"></a>
+    </div>
+    <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation" ng-init="showRightMenu()">
+        <ul class="nav navbar-nav navbar-right init-header-hide" data-ng-show="!authentication.user">
+            <li data-ui-sref-active="active">
+                <a href="/cadastrar#/">Cadastrar-se</a>
+            </li>
+            <li class="divider-vertical"></li>
+            <li data-ui-sref-active="active">
+                <a href="/entrar">Entrar</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right init-header-hide" ng-show="authentication.user">
+            <li class="dropdown">
+                <md-menu md-offset="0 -7">
+                    <a class="dropdown-toggle user-header-dropdown-toggle a-icon-header" role="button"
+                       ng-click="openMenu($mdOpenMenu, $event)">
+                        <img data-ng-src="/partials/img/notificacoes.svg" alt="notificações" class="icon-header"  />
+                    </a>
+                    <md-menu-content width="6">
+                        <md-menu-item>
+                            <md-button ng-href="{{notification.link}}" ng-repeat="notification in notifications">
+                                <p ng-bind="userIdentity(notification.sender)"></p>
+                                <p ng-bind-html="notification.message"></p>
+                            </md-button>
+                        </md-menu-item>
+                        <md-menu-item class="notification-options">
+                            <a class="notification-option text-center" ui-sref="myNotifications">Ver mais</a>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </li>
+            <li class="dropdown">
+                <div class="">
+                    <a class="dropdown-toggle user-header-dropdown-toggle a-icon-header" role="button"
+                       ui-sref="profile">
+                        <img data-ng-src="/partials/img/perfil.svg" class="icon-header header-profile-image" alt="perfil"  />
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <md-menu class="header-menu" md-offset="42 0">
+                    <a class="dropdown-toggle user-header-dropdown-toggle a-header" role="button"
+                       ng-click="openMenu($mdOpenMenu, $event)">
+                        <span data-ng-bind="formtName(authentication.user.name)"></span> <b class="caret"></b>
+                    </a>
+                    <md-menu-content class="header-menu-content">
+                        <md-menu-item>
+                            <md-button ng-href="/logout">
+                                Sair
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </li>
+        </ul>
+    </nav>
+</div><!--header-->
+<div class="header-space">
+</div>

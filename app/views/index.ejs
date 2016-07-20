@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+<head>
+    <% include partials/head.ejs %>
+    <!-- build:css css/index.min.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.css">
+    <link rel="stylesheet" href="styles/partials/common.css">
+    <link rel="stylesheet" href="styles/partials/header.css">
+    <link rel="stylesheet" href="styles/partials/footer.css">
+    <link rel="stylesheet" href="styles/index/index.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+<% include partials/header.ejs %>
+
+<div ui-view></div>
+
+<% include partials/footer.ejs %>
+<!-- build:js js/index.min.js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-ui-notification/dist/angular-ui-notification.js"></script>
+<script src="bower_components/angular-input-masks/angular-input-masks-standalone.js"></script>
+<script src="index/index.js"></script>
+<script src="index/IndexController.js"></script>
+<script src="js/controllers/HeaderController.js"></script>
+<script src="js/services/POIService.js"></script>
+<script src="js/services/anchorSmoothScroll.js"></script>
+<!-- endbuild -->
+</body>
+</html>

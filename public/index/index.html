@@ -1,0 +1,130 @@
+<h1 class="title-main text-center">TESTE DESENVOLVEDOR 2</h1>
+
+<section class="section1">
+
+    <h2 class="title">1) Serviço para cadastrar pontos de interesse</h2>
+
+    <div id="content-1" class="content1 content-generic">
+
+        <form name="search" class="container inline-form" ng-submit="savePOI()">
+
+            <div class="form-group">
+                <label for="name">Nome do POI</label>
+                <input id="name" required
+                       type="text"
+                       class="form-control"
+                       ng-model="poi.name"/>
+            </div>
+
+            <div class="form-group">
+                <label for="poix">Cordenada X</label>
+                <input id="poix" required
+                       type="number" min="0" step="1"
+                       class="form-control"
+                       ng-model="poi.x"/>
+            </div>
+
+            <div class="form-group">
+                <label for="poiy">Cordenada Y</label>
+                <input id="poiy" required
+                       type="number" min="0" step="1"
+                       class="form-control"
+                       ng-model="poi.y"/>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary" id="savePOI">Salvar</button>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+<section class="section2">
+
+    <h2 class="title">2) Serviço para listar pontos de interesse</h2>
+    <div id="content-2" class="content2 container content-generic">
+        <div class="text-center space-bottom-sm">
+            <button class="btn btn-primary"  ng-click="displayPOIs()" ng-if="!showPOIs">Listar POI's</button>
+            <button class="btn btn-primary"  ng-click="hidePOIs()" ng-if="showPOIs">Ocultar Lista</button>
+        </div>
+        <div>
+
+            <div class="table-responsive" ng-show="showPOIs">
+                <input id="filtro" type="search" class="form-control space-bottom-sm" ng-model="filter" placeholder="Filtro">
+                <table class="table table-hover">
+                    <tr>
+                        <th>NOME</th>
+                        <th>CORDENADA X</th>
+                        <th>CORDENADA Y</th>
+                    </tr>
+                    <tr ng-repeat="object in objects | filter: filter">
+                        <td ng-bind="object.name"></td>
+                        <td ng-bind="object.x"></td>
+                        <td ng-bind="object.y"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+</section>
+
+<section class="section3">
+
+    <h2 class="title">3) Serviço para listar POIs por proximidade</h2>
+
+    <div id="content-3" class="content3 content-generic">
+
+
+        <form name="search" class="container inline-form" ng-submit="searchPOI()">
+
+            <div class="form-group">
+                <label for="searchx">Cordenada X</label>
+                <input id="searchx" required
+                       type="number" min="0" step="1"
+                       class="form-control"
+                       ng-model="search.x"/>
+            </div>
+
+            <div class="form-group">
+                <label for="searchy">Cordenada Y</label>
+                <input id="searchy" required
+                       type="number" min="0" step="1"
+                       class="form-control"
+                       ng-model="search.y"/>
+            </div>
+
+            <div class="form-group">
+                <label for="searchmax">Distância máxima</label>
+                <input id="searchmax" required
+                       type="number" min="0" step="1"
+                       class="form-control"
+                       ng-model="search.max"/>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+                <button class="btn btn-primary" type="button" ng-click="testeServ3()">Teste</button>
+            </div>
+
+        </form>
+
+        <div class="table-responsive" ng-show="pois">
+            <table class="table table-hover">
+                <tr>
+                    <th>NOME</th>
+                    <th>CORDENADA X</th>
+                    <th>CORDENADA Y</th>
+                </tr>
+                <tr ng-repeat="object in pois">
+                    <td ng-bind="object.name"></td>
+                    <td ng-bind="object.x"></td>
+                    <td ng-bind="object.y"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,75 @@
+@import "../partials/config";
+
+.title-main{
+  color: $color-2;
+}
+
+.title{
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  background-color: $color-1;
+  padding: 0.8% 0;
+  margin: 0;
+}
+
+.content-generic{
+  margin: 4% auto;
+}
+
+.searchForm{
+  text-align: center;
+  .form-group{
+    text-align: left;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 270px;
+  }
+}
+
+.inline-form{
+  .form-group{
+    width: 30%;
+    margin: 1% 1%;
+    display: inline-table;
+    min-width: 270px;
+  }
+}
+
+.inline-block{
+  display: inline;
+}
+
+table{
+  text-align: left;
+}
+
+.space-bottom-sm{
+  margin-bottom: 10px;
+}
+
+/* quando for smartphones*/
+@media screen and (max-width: 480px) {
+  .lead-form{
+    .form-group{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+/* quando for descktop ou tablets*/
+@media screen and (min-width: 480px) {
+
+}
+
+/* responsividade descrição dos tipos*/
+@media screen and (max-width: 1000px) {
+}
+
+/* responsividade botão main*/
+@media screen and (max-width: 2000px) {
+
+}

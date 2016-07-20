@@ -1,0 +1,213 @@
+@import "config";
+
+body,html{
+  height: 100%;
+}
+
+html{
+  font-family: arial, sans-serif;
+}
+
+.wrap{
+  min-height: 77.6%;
+  //background-color: #eee;
+}
+
+.vertical-align-middle{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// btn
+
+.btn-primary {
+  border: $color-2 !important;
+  background-color: $color-2;
+  outline: none !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background-color: $color-3 !important;
+  //color: $color-8;
+}
+
+.input-group-btn>.btn-primary
+{
+  //border: 1px solid $color-2 !important;
+  //font-weight: inherit;
+}
+
+// ui notification
+
+.ui-notification{
+  background-color: $color-1;
+  color: $color-4;
+}
+
+.ui-notification.info{
+  //background-color: $color-2;
+}
+
+// md dialog
+
+md-dialog md-dialog-actions .md-button{
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+// show password
+
+.show-password{
+  margin-top: 5px;
+  font-size: 0.9em;
+  label{
+    font-weight: normal;
+    position: relative;
+    top: -2px;
+    padding-left: 4px;
+    margin-bottom: 0;
+  }
+}
+
+// pop-up dialog
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+  background-color: $color-1;//rgb(63,81,181);
+  color: $color-8;//rgba(255,255,255,0.87);
+}
+
+//================================== menu ==========================================//
+/* Styles go here */
+
+md-sidenav {
+  overflow: visible;
+}
+
+.side-menu, .side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.side-menu .md-button.active {
+  color: $color-9; //#FF5722; /* deep-orange 500 */
+}
+
+.side-menu .menu-toggle-list a.md-button {
+  display: block;
+  padding: 0 16px 0 32px;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
+}
+
+.side-menu .menu-toggle-list .md-button {
+  display: block;
+  padding: 0 16px 0 32px;
+  text-transform: none;
+}
+
+.side-menu > li {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.md-button-toggle .md-toggle-icon.toggled {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+}
+
+.md-button-toggle.toggled {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.side-menu .md-button-toggle .md-toggle-icon {
+  margin: auto 0 auto auto;
+  padding-top: 12px;
+  width: 15px;
+  float: right;
+  transition: transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+}
+
+.menu-toggle-list.ng-hide {
+  max-height: 0;
+}
+
+.side-menu .md-button {
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 0;
+  max-height: 40px;
+  overflow: hidden;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+  width: 100%;
+}
+
+.menu-toggle-list {
+  background: #fff;
+  max-height: 1300px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition-property: max-height;
+  -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+  -moz-transition-property: max-height;
+  transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+  transition-property: max-height;
+}
+
+
+.side-menu menu-toggle span{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.init-hide{
+  display: none;
+}
+
+
+// eee menu
+
+.navigation-menu {
+  width: 100%;
+}
+.navigation-menu ul {
+  list-style: none;
+}
+
+.navigation-menu > ul > li > ul {
+  padding: 0;
+}
+
+.navigation-menu > ul > li > ul > li> a {
+  padding-left: 40px;
+}
+
+.navigation-menu > ul {
+  //background: #dddddd;
+  padding: 0;
+}
+
+.navigation-menu ul li > a {
+  border-bottom: solid 1px #eeeeee;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: $color-1;
+}
+
+.navigation-menu ul li > a:focus,
+.navigation-menu ul li > a:hover {
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: $color-9;
+}
